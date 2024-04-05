@@ -24,6 +24,8 @@ footer {
     background-color: #7525A7;
 }
 
+/* ---------- Barra de navegación ----------*/
+
 .search {
     /* flex: 1; */
     display: flex;
@@ -84,8 +86,10 @@ footer {
     text-decoration: underline;
 }
 
+/* ---------- Section Hero ----------*/
+
 #hero {
-    background: url('./assets/hero_bg.png');
+    background: url('../assets/hero_bg.png');
     background-size: cover;
     background-position: top center;
 }
@@ -111,6 +115,8 @@ footer {
     line-height: 80px;
 }
 
+/* ---------- Main ----------*/
+
 .container {
     width: 1220px;
     margin: 0 auto;
@@ -123,6 +129,11 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+}
+
+.product-container a {
+    text-decoration: none;
+    color: initial;
 }
 
 .product-img {
@@ -182,6 +193,8 @@ footer {
     font-weight: 700;
     color: #428f13;
 }
+
+/* ---------- Footer ----------*/
 
 footer .container {
     display: flex;

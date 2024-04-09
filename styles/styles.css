@@ -31,8 +31,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* display: grid; */
-    grid-template-columns: repeat(3, 1fr);
     padding: 15px;
 }
 
@@ -201,10 +199,10 @@ footer .container {
     flex-direction: column;
 }
 
-.columns-container {
+footer .columns-container {
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .columns-container .col ul {
     list-style-type: none;
@@ -230,12 +228,81 @@ footer .container {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+    section .container {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .title-container span:first-child {
+        font-size: 35px;
+    }
+    
+    .title-container span:last-child {
+        font-size: 70px;
+        line-height: 75px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .search {
+        padding: 20px 5px;
+    }
+    
+    .search .form input {
+        width: 100px;
+    }
+
+    .search .logo img {
+        width: 130px;
+    }
+
+    .nav {
+        font-size: 14px;
+    }
+
+    main .container {
+        width: 100%;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    main .product-container {
+        padding:20px 0px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    
+    }
+    main .product-card {
+        width: 100%;
+    }
+
+    footer .container {
+        width: 100%;
+        font-size: 11.5px;
+        justify-content: space-between;
+    }
+
+    footer .columns-container {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+    section .container {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
     .search .form input {
         width: 300px;
     }
 
-    .container {
+    main .container {
         width: 95%;
     }
 
@@ -256,32 +323,28 @@ footer .container {
         font-size: 80px;
         line-height: 75px;
     }
-}
 
-@media (max-width: 425px) {
-    .search .form input {
-        width: 100px;
+    footer .container {
+        width: 100%;
+        justify-content: space-between;
     }
 
-    .search .logo img {
-        width: 180px;
-    }
-
-    .product-container {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
-    }
-    .product-card {
-        width: auto;
-    }
-
-    footer {
-        font-size: 12px;
+    footer .columns-container {
+        padding: 0px 30px;
+        gap: 10px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1240px) {
-    .container {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    section .container {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    main .container {
+        margin: 0;
+        font-size: 14px;
         width: 95%;
     }
 
@@ -292,4 +355,16 @@ footer .container {
     .product-card {
         width: auto;
     }
+
+    footer .container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    footer .columns-container {
+        padding: 0px 30px;
+        gap: 10px;
+    }
 }
+
+

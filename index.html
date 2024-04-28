@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- <link rel="stylesheet" href="./styles/details.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css..." />
+</head>
+
+<body>
+    <header>
+        <div class="search">
+            <div class="logo">
+                <a href="./index.html"><img src="./assets/tiendamia-logo.svg" width="218" alt="Logo store" /></a>
+            </div>
+            <div class="form">
+                <input id="search" type="text" placeholder="Search" />
+            </div>
+            <div class="social">
+                <ul>
+                    <li><img src="./assets/facebook.png" alt="Facebook"></li>
+                    <li><img src="./assets/instagram.png" alt="Instagram"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="nav" class="nav"></div>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <div class="title-container">
+                <span>Tecnología</span>
+                <span>Renovada</span>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <div id="products" class="product-container">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div id="footer" class="columns-container"></div>
+            <div class="copyright">
+                Curso de HTML + CSS 2023
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/layout.js"></script>
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/productCards.js"></script>
+    <script src="./scripts/filterProducts.js"></script>
+</body>
+
+</html>

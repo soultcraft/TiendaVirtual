@@ -1,0 +1,379 @@
+body,
+html {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+header {
+    border: 0;
+    height: 152px;
+    background-color: #ff3b3c;
+}
+
+section {
+    height: 340px;
+}
+
+main {
+    height: auto;
+    padding: 10px;
+}
+
+footer {
+    min-height: 368px;
+    background-color: #7525A7;
+}
+
+/* ---------- Barra de navegación ----------*/
+
+.search {
+    /* flex: 1; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.search .form {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.search .social ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search .social ul li {
+    padding: 0 10px;
+}
+
+.search .form input {
+    height: 62px;
+    border-radius: 14px;
+    border: none;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav {
+    padding: 10px 0;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Section Hero ----------*/
+
+#hero {
+    background: url('../assets/hero_bg.png');
+    background-size: cover;
+    background-position: top center;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title-container span {
+    display: block;
+    color: white;
+    font-weight: 700;
+}
+
+.title-container span:first-child {
+    font-size: 40px;
+}
+
+.title-container span:last-child {
+    font-size: 100px;
+    line-height: 80px;
+}
+
+/* ---------- Main ----------*/
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+   
+    height: inherit;
+    min-height: inherit;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.product-container a {
+    text-decoration: none;
+    color: initial;
+    justify-content: center;
+
+}
+.img-container {
+    width: auto;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.product-img {
+    max-width: 100%;
+    max-height: 230px;
+    align-self: center;
+}
+
+.product-price-block {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card {
+    background-color: #F0F0F0;
+    border-radius: 14px;
+    width: auto;
+    overflow: hidden;
+}
+
+.product-info {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: block;
+    line-height: 22px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: rgb(49, 49, 49);
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.product-tax-policy {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.product-price-block .price {
+    font-size: 22px;
+    font-weight: 700;
+    flex: 1;
+}
+
+.product-price-block .discount {
+    font-size: 12px;
+    font-weight: 700;
+    color: #428f13;
+}
+
+/* ---------- Footer ----------*/
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+}
+.columns-container .col ul li {
+    padding: 5px 0;
+}
+.columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+}
+.copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+    section .container {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .title-container span:first-child {
+        font-size: 35px;
+    }
+    
+    .title-container span:last-child {
+        font-size: 70px;
+        line-height: 75px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .search {
+        padding: 20px 5px;
+    }
+    
+    .search .form input {
+        width: 100px;
+    }
+
+    .search .logo img {
+        width: 130px;
+    }
+
+    .nav {
+        font-size: 14px;
+    }
+
+    main .container {
+        width: 100%;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    main .product-container {
+        padding:20px 0px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    
+    }
+    main .product-card {
+        width: 100%;
+    }
+
+    footer .container {
+        width: 100%;
+        font-size: 11.5px;
+        justify-content: space-between;
+    }
+
+    footer .columns-container {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+    section .container {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .search .form input {
+        width: 300px;
+    }
+
+    main .container {
+        width: 95%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-card {
+        width: auto;
+    }
+
+    .title-container span:first-child {
+        font-size: 35px;
+    }
+    
+    .title-container span:last-child {
+        font-size: 80px;
+        line-height: 75px;
+    }
+
+    footer .container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    footer .columns-container {
+        padding: 0px 30px;
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    section .container {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    main .container {
+        margin: 0;
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .product-card {
+        width: auto;
+    }
+
+    footer .container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    footer .columns-container {
+        padding: 0px 30px;
+        gap: 10px;
+    }
+}
+
+

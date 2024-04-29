@@ -2,7 +2,7 @@
 function createCard(product) {
   return `
   <article class="product-card" href="./details.html">
-  <a href="./details.html">
+  <a href="./details.html?id=${product.id}">
       <div class="img-container">
         <img class="product-img" src="${product.image[0]}" alt="${product.alt}">
       </div>

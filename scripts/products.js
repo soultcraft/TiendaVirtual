@@ -38,7 +38,7 @@ const prod1 = new Product(
   9,
   "Incluye impuesto País y percepción AFIP",
   ["rojo", "negro", "azul"],
-  "* Este producto es recertificado, renovado o refabricado. Esto significa que el mismo ha sido reacondicionado o reparado por el vendedor para lucir y funcionar correctamente. El producto puede venir en caja genérica."
+  "Pantalla Super Retina XDR de 6,1 pulgadas. Descargas ultrarrápidas en 5G, ¿alto? transmisión de calidad en modo cinematográfico en 1080p a 30 fps. Grabación de vídeo HDR Dolby Vision de hasta 4K a 60 fps. Alcance de zoom óptico de 2X. Chip A15 Bionic. Nueva CPU de 6 núcleos con 2 núcleos de rendimiento y 4 de eficiencia. Nueva GPU de 4 núcleos. Nuevo Neural Engine de 16 núcleos Hasta 19 horas de reproducción de vídeo. Identificación facial. Escudo cerámico en la parte delantera. Aluminio de calidad aeroespacial, resistente al agua hasta una profundidad de 6 metros durante un máximo de 30 minutos. Compatible con accesorios MagSafe y cargadores inalámbricos"
 );
 const prod2 = new Product(
   1002,
@@ -105,7 +105,7 @@ const prod5 = new Product(
   "* Este producto es recertificado, renovado o refabricado. Esto significa que el mismo ha sido reacondicionado o reparado por el vendedor para lucir y funcionar correctamente. El producto puede venir en caja genérica."
 );
 const prod6 = new Product(
-  1005,
+  1006,
   [
     "./assets/iphone13pro/13p_1.jpg",
     "./assets/iphone13pro/13p_2.jpg",

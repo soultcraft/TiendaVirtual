@@ -16,14 +16,16 @@ ${product.image
       `<div class="thumbnail-container"><img src="${image}" alt="${product.alt}" onclick="changeMini(event)"/></div>`
   )
   .join("")}
-  <img id="bigImg" class="main-image" src="${product.image[0]}" alt="${product.alt}"></div>
+  <img id="bigImg" class="main-image" src="${product.image[0]}" alt="${
+    product.alt
+  }"></div>
 
     <div class="product-description-block">
         <h1 class="titulo">${product.title}</h1>
         <form action="" class="selector">
             <fieldset>
                 <label for="color" class="label">Color</label>
-                <select type="text" placeholder="Selecciona un color">
+                <select id="color-${+id}" type="text" placeholder="Selecciona un color">
                     ${product.color
                       .map(
                         (color) => `<option value="${color}">${color}</option>`
@@ -40,7 +42,9 @@ ${product.image
     <div class="product-checkout-block">
         <div class="checkout-container">
             <span class="checkout-total-label">Total:</span>
-            <h2 id="price" class="checkout-total-price">S/. ${product.price}</h2>
+            <h2 id="price" class="checkout-total-price">S/. ${
+              product.price
+            }</h2>
             <p class="checkout-description">${product.tax}</p>
             <ul class="checkout-policy-list">
                 <li>
@@ -54,11 +58,11 @@ ${product.image
             </ul>
             <div class="checkout-process">
                 <div class="top">
-                    <input type="number" min="1" value="1" onchange="changeSubtotal(event)"/>
+                    <input id="quantity-${+id}" type="number" min="1" value="1" onchange="changeSubtotal(event)"/>
                     <button class="btn-primary">Comprar</button>
                 </div>
                 <div class="bottom">
-                    <button class="btn-outline">Añadir al Carrito</button>
+                    <button class="btn-outline" onclick="saveProduct(event)">Añadir al Carrito</button>
                 </div>
             </div>
         </div>
@@ -69,23 +73,53 @@ ${product.image
 }
 printDetails(id);
 
-function changeMini (event) {
-    const selectSrc = event.target.src;
-    const bigSelector = document.querySelector("#bigImg");
-    bigSelector.src = selectSrc;
+function changeMini(event) {
+  const selectSrc = event.target.src;
+  const bigSelector = document.querySelector("#bigImg");
+  bigSelector.src = selectSrc;
 }
 
-function changeSubtotal (event) {
-    const quantity = event.target.value;
-    const product = products.find(product => product.id == id)
-    const subTotal = quantity * product.price
-    const priceSelector = document.querySelector("#price")
-    priceSelector.innerHTML = `S/. ${quantity * product.price}`
+function changeSubtotal(event) {
+  const quantity = event.target.value;
+  const product = products.find((product) => product.id == id);
+  const subTotal = quantity * product.price;
+  const priceSelector = document.querySelector("#price");
+  priceSelector.innerHTML = `S/. ${quantity * product.price}`;
 
-    console.log(subTotal);
-    console.log(product.price);
+  console.log(subTotal);
+  console.log(product.price);
 }
 
+function saveProduct(event) {
+  const found = products.find((each) => each.id === id);
+  const product = {
+    id: id,
+    title: found.title,
+    price: found.price,
+    image: found.image[0],
+    color: document.querySelector("#color-" + id).value,
+    quantit: document.querySelector("#quantity-" + id).value,
+  };
+
+  let cartButton = localStorage.getItem("cart");
+
+//   console.log(cartButton);
+
+  if (cartButton == null) {
+    const stringCart = JSON.stringify([product]);
+    localStorage.setItem("cart", stringCart)
+    // console.log(cartButton);
+  } else {
+    let loStCard = JSON.parse(cartButton)
+    loStCard.push(product)
+    localStorage.setItem("cart", JSON.stringify(loStCard));
+}
+console.log(cartButton);
+
+}
+
+// const stringfyProduct = JSON.stringify(product);
+// localStorage.setItem("cart", stringfyProduct)
 /*
 // bloque imagenes
 
